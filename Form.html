@@ -5,60 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulär</title>
     <link href="Style.css" rel="stylesheet">
+</head>    
 
-</head>
-<body class="Form">
-    <div class="wrapper">
-        <Header>
-            <h1>Formulär</h1>
-        </Header>
-        <nav>
-            <ul>
-                <li><a href="Rekord.html">Rekord</a></li>
-                <li><a href="Index.html">Startsida</a></li>
-                <li><a href="Form.html">Formulär</a></li>
-            </ul>
-        </nav>
-        <main>
-            <form method="get" action="Formans.html">
-                <fieldset>
-                    <label for="fnamn">Förnamn:</label>
-                    <input type="text" name="fnamn" id="fnamn" required/>
-                    <br>
-                    <br>
-                    <label for="enamn">Efternamn:</label>
-                    <input type="text" name="enamn" id="enamn" required/>
-                    <br>
-                    <br>
-                </fieldset>
-                <fieldset>
-                    <input type="radio" name="gender" value="m" id="m"/>
-                    <label for="m">Man</label>
-                    <input type="radio" name="gender" value="k" id="k"/>
-                    <label for="k">Kvinna</label>
-                    <input type="radio" name="gender" value="a" id="a"/>
-                    <label for="a">Attackhelikopter</label>
-                </fieldset>
-                    <br>
-                    <br>
-                <fieldset>
-                    <input type="checkbox" namn="farg" value="b" id="b"/>
-                    <label for="b">blå</label>
-                    <input type="checkbox" namn="farg" value="g" id="g"/>
-                    <label for="g">grön</label>
-                    <input type="checkbox" namn="farg" value="s" id="s"/>
-                    <label for="s">svart</label>
-                    <input type="checkbox" namn="farg" value="v" id="v"/>
-                    <label for="v">vit</label>
-                </fieldset>
-                    <br>
-                    <br>
-                    <input type="submit" value="skicka">
-            </form>
-        </main>
-        <footer>
-            <p>Footer</p>
-        </footer>
-    </div>
-</body>
+    <body class="Form">
+        <div class="wrapper">
+            <Header>
+                <h1>Förslag på idrottare</h1>
+            </Header>
+            <nav>
+                <ul>
+                    <li><a href="Rekord.html">Olympiska Rekord</a></li>
+                    <li><a href="Index.html">Olympiska spelen</a></li>
+                    <li><a href="Form.html">Förslag</a></li>
+                </ul>
+            </nav>
+            <main>
+                <form method="get" action="Formans.html"><!--Formulär där informationen skikas till en annan url(Formans.html)-->
+                    <fieldset><!--Gruperar relaterade element i en ruta-->
+                        <label for="fnamn">Förnamn:</label><!--namnger ett formulärelement-->
+                        <input type="text" name="fnamn" id="fnamn" required/><!--Anger vilken typ elementet är (radio,checkbox,text,password), Required anger att det är en obligatorisk fråga-->
+                        <br><!--Radbrytning-->
+                        <br>
+                        <label for="enamn">Efternamn:</label>
+                        <input type="text" name="enamn" id="enamn" required/>
+                    </fieldset>
+                    <fieldset>
+                        <input type="radio" name="gender" value="m" id="m" required/>
+                        <label for="m">Man</label>
+                        <input type="radio" name="gender" value="k" id="k" required/>
+                        <label for="k">Kvinna</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="checkbox" name="Sport" value="H" id="H"/>
+                        <label for="H">HöjdHopp</label>
+                        <input type="checkbox" name="Sport" value="L" id="L"/>
+                        <label for="L">LängdHopp</label>
+                        <input type="checkbox" name="Sport" value="S" id="S"/>
+                        <label for="S">Sprint</label>
+                        <input type="checkbox" name="Sport" value="A" id="A"/>
+                        <label for="A">Annan</label>
+                    </fieldset>
+                    <input type="submit" value="skicka"><!--knapp för att skicka datan frånj formuläret-->
+                </form>
+            </main>
+            <footer>
+                <p>Hampus persson</p>
+            </footer>
+        </div>
+    </body>
+
 </html>

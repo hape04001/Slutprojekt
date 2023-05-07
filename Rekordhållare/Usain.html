@@ -2,27 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usain</title>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="../Style.css">
 </head>
-<body>
-    <header>
-        <h1>Usain</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="Rekord.html">Rekord</a></li>
-            <li><a href="Index.html">Startsida</a></li>
-            <li><a href="Form.html">Formulär</a></li>
-        </ul>
-    </nav>
-    <main>
+    <body class="Rek"><!--class som används för att ändra gridlayout-->
+        <div class="wrapper">
+            <header>
+                <h1>Usain Bolt</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="../Rekord.html">Olympiska Rekord</a></li>
+                    <li><a href="../Index.html">Olympiska spelen</a></li>
+                    <li><a href="../Form.html">Förslag</a></li>
+                </ul>
+            </nav>
+            <main>
+                <Section>
+                    <h2>
+                        Om Usain
+                    </h2>
+                    <p>
+                        Usain St. Leo Bolt, med smeknamnet "Lightning" Bolt, född 21 augusti 1986 i Trelawny i Jamaica, är en jamaicansk före detta friidrottare (kortdistanslöpare), allmänt ansedd som en av de största inom sporten genom alla tider.
+                    </p>
+                </Section>
+                <Section>
+                    <iframe src="https://www.youtube.com/embed/26NxaZqzbok"></iframe><!--Bildruta som används för att spela en embeded video-->   
+                </Section>
+                <Section>
+                    <img src="../Bilder/Usain_Bolt.jpg" alt="Bild på Usain Bolt">  
+                </Section>
+            </main>
+            <footer>
+                <p>Hampus persson</p>
+            </footer>
+        </div>
+    </body>
 
-    </main>
-    <footer>
-        <p>footer</p>
-    </footer>
-</body>
+
 </html>

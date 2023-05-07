@@ -1,4 +1,8 @@
+
+
+/*class som skapar en grid*/
 .wrapper{
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 50px auto auto 30px;
@@ -8,49 +12,25 @@
     "main"
     "footer";
 }
-
-a{
-    color: black;
-    text-decoration: none;
-}
+/*Egenskaper för formulär*/
 form{
 margin: 10px auto;
 }
-section{
-    margin: auto;
-}
-section table,th,td,tr{
-    border: solid black 1px;
-    margin: auto;
-    text-align: center;
-    font-size: 1em;
 
-}
-caption{
-    text-align: center;
-    font-size: 2em;
-}
-tr:nth-child(odd){
-    background-color: aquamarine;
-}
-
-ul{
-    list-style-type: none;
-}
-
+/*Egensaper för header*/
 header{
     grid-area: header;
 }
-
 
 header > h1{
     margin:0;
     text-align: center;
 }
 
+/*Egenkaper för Nav*/
 nav{
     grid-area: nav;
-    background-color: lightgrey;
+    background-color: rgb(194, 191, 191);
     text-align: center;
 }
 
@@ -63,17 +43,19 @@ nav > ul{
 }
 
 nav li{
-    list-style-type: none;
     height: 100%;
-}
 
+}
+ 
 nav a{
-    display: inline-block;
+    margin: auto;
     width: 100%;
     height: 100%;
+    text-decoration: none;
     font-size: 1.5em;
 }
 
+/*Egenskaper för Main*/
 main{
     grid-area: main;
     display: grid;
@@ -87,26 +69,100 @@ main img{
     display: none;
 }
 
+main iframe{
+    display: block;
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+main img{
+    border-radius: 99%;
+    border: solid black 2px;
+}
+
+/*Egenskaper för footer*/
 footer{
     grid-area: footer;
     text-align: right;
 }
 
+/*Egenskaper för listor*/
+ul{
+    list-style-type: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+/*Egenskaper för länkar*/
+a{
+    color: black;
+}
+
+/*Egenskaper för section*/
+section{
+    margin: 0 auto;
+}
+/*Egenskaper för tabell i section*/
+section table,th,td,tr{
+    border: solid black 1px;
+    border-collapse: collapse;
+    margin: auto;
+    text-align: center;
+    font-size: 1em;
+
+}
+
+
+tbody>tr:nth-child(odd){
+    background-color: #7fffd4;
+}
+
+fieldset{
+    margin: 10px;
+    text-align: center;
+}
+/*Egenskaper för skärm med upösnings bredd över 800 pixlar*/
 @media screen and (min-width: 800px){
     body{
         height: 95vh;
     }
-    .Form{
-        width: 97%;
-        margin: 0 auto;
-    }
-
 
     .wrapper{
         width: 97%;
         height: 95%;
         margin: 0 auto;
         grid-template-rows: 50px 50px auto 30px;
+    }
+    .wrapper main{
+        grid-template-columns: 1fr 2fr  ;
+        overflow: auto;
+    }
+
+    .Form{
+        width: 97%;
+        grid-template-rows:50px 50px auto 30px ;
+    }
+    .Form main{
+        grid-template-columns: 1fr;
+    }
+    
+    .Rek main{
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    main iframe{
+        display: block;
+        width: 30vw;
+        height: 25vh;
+        margin: 0 auto;
+    }
+    main img{
+        display: block;
+        width: 75%;
+        margin: auto;
     }
 
     nav > ul{
@@ -116,27 +172,9 @@ footer{
         text-decoration: none;
     }
 
-    .wrapper main{
-        grid-template-columns: 1fr 2fr ;
-        overflow: auto;
-    }
-
-    .Form main{
-        grid-template-columns: 1fr;
-    }
-
-    main img{
-        display: block;
-        width: 75%;
-        margin: auto;
-    }
 
     section{
         margin:20vh 4vw ;
-        font-size: 1.5em;
-     
-    }
-
-
-    
+        font-size: 1.5em;  
+    } 
 }
