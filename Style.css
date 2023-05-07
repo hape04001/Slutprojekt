@@ -126,7 +126,8 @@ fieldset{
 }
 /*Egenskaper för skärm med upösnings bredd över 800 pixlar*/
 @media screen and (min-width: 800px){
-    body{
+    
+body{
         height: 95vh;
     }
 
