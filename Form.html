@@ -9,9 +9,9 @@
 
     <body class="Form">
         <div class="wrapper">
-            <Header>
+            <header>
                 <h1>Förslag på idrottare</h1>
-            </Header>
+            </header>
             <nav>
                 <ul>
                     <li><a href="Rekord.html">Olympiska Rekord</a></li>
@@ -21,29 +21,36 @@
             </nav>
             <main>
                 <form method="get" action="Formans.html"><!--Formulär där informationen skikas till en annan url(Formans.html)-->
+                    
                     <fieldset><!--Gruperar relaterade element i en ruta-->
+                        <legend>Namn</legend>
                         <label for="fnamn">Förnamn:</label><!--namnger ett formulärelement-->
-                        <input type="text" name="fnamn" id="fnamn" required/><!--Anger vilken typ elementet är (radio,checkbox,text,password), Required anger att det är en obligatorisk fråga-->
+                        <input type="text" name="fnamn" id="fnamn" required><!--Anger vilken typ elementet är (radio,checkbox,text,password), Required anger att det är en obligatorisk fråga-->
                         <br><!--Radbrytning-->
                         <br>
                         <label for="enamn">Efternamn:</label>
-                        <input type="text" name="enamn" id="enamn" required/>
+                        <input type="text" name="enamn" id="enamn" required>
                     </fieldset>
                     <fieldset>
-                        <input type="radio" name="gender" value="m" id="m" required/>
+                        <legend>Kön</legend>
+                        <input type="radio" name="gender" value="m" id="m" required>
                         <label for="m">Man</label>
-                        <input type="radio" name="gender" value="k" id="k" required/>
+                        <input type="radio" name="gender" value="k" id="k" required>
                         <label for="k">Kvinna</label>
                     </fieldset>
                     <fieldset>
-                        <input type="checkbox" name="Sport" value="H" id="H"/>
+                        <legend>Sport</legend>
+                        <input type="checkbox" name="Sport" value="H" id="H">
                         <label for="H">HöjdHopp</label>
-                        <input type="checkbox" name="Sport" value="L" id="L"/>
+                        <input type="checkbox" name="Sport" value="L" id="L">
                         <label for="L">LängdHopp</label>
-                        <input type="checkbox" name="Sport" value="S" id="S"/>
+                        <input type="checkbox" name="Sport" value="S" id="S">
                         <label for="S">Sprint</label>
-                        <input type="checkbox" name="Sport" value="A" id="A"/>
+                        <input type="checkbox" name="Sport" value="A" id="A">
                         <label for="A">Annan</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type ="textbox" name="varför" value="" id="V">
                     </fieldset>
                     <input type="submit" value="skicka"><!--knapp för att skicka datan frånj formuläret-->
                 </form>

@@ -4,20 +4,34 @@
 .wrapper{
 
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-rows: 50px auto auto 30px;
     grid-template-areas: 
-    "header"
-    "nav"
-    "main"
-    "footer";
+    "header header"
+    "nav nav"
+    "lokal main"
+    "footer footer";
 }
+.lokal{
+    grid-area: lokal;
+    background-color: white;
+    margin-right:30px;
+}
+.lokal >ul {
+    grid-template-columns:1fr;
+}
+#startsida .wrapper{
+    grid-template-columns:1fr
+}
+
+
+
 /*Egenskaper för formulär*/
 form{
 margin: 10px auto;
 }
 
-/*Egensaper för header*/
+/*Egenskaper för header*/
 header{
     grid-area: header;
 }
@@ -92,7 +106,7 @@ ul{
 }
 
 li{
-    list-style-type: none;
+ 
 }
 
 /*Egenskaper för länkar, gör länktexter svarta*/
@@ -106,7 +120,7 @@ section{
     margin: 0 auto;
 }
 /*Egenskaper för tabell i section, ger dem svart ram samt centrerar tabellen i section*/
-section table,th,td,tr{
+main table, main th, main td, main tr{
     border: solid black 1px;
     border-collapse: collapse;
     margin: auto;
